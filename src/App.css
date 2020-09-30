@@ -1,0 +1,119 @@
+main{
+    margin-top: 8em;
+}
+.todos{
+    background: #fff;
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    box-shadow: 5px 5px 10px 4px;
+    padding: 2.5em 0;    
+}
+.todos div{
+    padding: 0 .3rem;
+}
+.add-todo{
+    margin: 2rem 0;
+    text-align: center;
+}
+.add-todo-title{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+.add-todo-form{
+    display: flex;
+}
+.add-todo-form input{
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 2rem;
+    border: none;
+}
+.add-todo-form input[type='text']{
+    flex: 10;
+    background-color: #aaa;
+}
+.add-todo-form input[type='text']:focus{
+    background-color: rgba(0, 0, 0, .9);
+    color: silver;
+}
+.add-todo-form input[type='submit']{
+    flex: 2;
+    cursor: pointer;
+    background-color: #1c2628;
+    color: seashell;
+} 
+.completed{
+    text-decoration: line-through;
+}
+.todo{
+    margin: 2.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+}
+.todo-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.todo-item h4{
+    /* max-width: 400px; */
+}
+.todo-item input[type='checkbox']{
+    margin-right: 1rem;
+    transition: all .5 ease;
+}
+.status{
+    padding-top: .5em;
+    padding-left: 2em;
+}
+
+/* button starts*/
+
+.btn{
+    padding: 1.3rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #1c2628;
+    color: #fff;
+    opacity: .9;
+}
+.btn:hover{
+    opacity: 1;
+}
+.del-btn{
+    color: rgb(121, 0, 0);
+    font-size: 1.5em;
+    cursor: pointer;
+    animation: del-btn-anima .5s forwards;
+    animation-delay: .5s;
+}
+.multiple-delete-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.multiple-delete-btn button{
+    margin-right: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: rgb(121, 0, 0);
+    color: white;
+}
+
+/* button ends */
+
+/* animations */
+
+@keyframes del-btn-anima{
+    0% {
+        opacity: 0;
+        transform: translateX(5em);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
